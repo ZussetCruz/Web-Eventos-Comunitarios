@@ -14,7 +14,6 @@ $tipo_mensaje = '';
 
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Asegúrate de que 'id_evento' esté presente en el POST
     if (isset($_POST['id_evento'])) {
         $id_evento = mysqli_real_escape_string($con, $_POST['id_evento']);
         $id_usuario = $_SESSION['user_id']; // Obtener el ID del usuario de la sesión

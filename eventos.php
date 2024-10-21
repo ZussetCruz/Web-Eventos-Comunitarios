@@ -2,7 +2,7 @@
 include('config.php');  
 
 // Consulta para obtener los eventos
-$consulta = "SELECT * FROM eventoscalendar"; // Asegúrate de que el nombre de la tabla sea correcto
+$consulta = "SELECT * FROM eventoscalendar"; 
 $resultado = mysqli_query($con, $consulta);  
 
 if (mysqli_num_rows($resultado) > 0) { 
@@ -14,9 +14,9 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<p class='card-text'>Fecha: " . $evento['fecha_inicio'] . " - " . $evento['fecha_fin'] . "</p>"; 
         echo "<p class='card-text'>" . $evento['descripcion'] . "</p>"; 
         
-        // Aquí agregamos el botón de registro
+        // botón de registro
         echo "<form action='registrar_evento.php' method='POST'>"; 
-        echo "<input type='hidden' name='id_evento' value='" . $evento['id'] . "'>"; // Asegúrate de que 'id' sea el nombre de la columna en tu tabla 
+        echo "<input type='hidden' name='id_evento' value='" . $evento['id'] . "'>"; 
         echo "<button type='submit' class='btn btn-primary'>Registrarse</button>"; 
         echo "</form>"; 
         

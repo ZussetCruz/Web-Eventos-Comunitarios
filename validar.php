@@ -15,8 +15,8 @@ $filas = mysqli_fetch_array($resultado);
 
 if ($filas) {
     // Si el usuario existe, guarda su ID y nombre en la sesión
-    $_SESSION['user_id'] = $filas['id']; // ID del usuario
-    $_SESSION['user_name'] = $filas['nombre']; // Nombre del usuario (opcional)
+    $_SESSION['user_id'] = $filas['id'];
+    $_SESSION['user_name'] = $filas['nombre']; 
 
     // Verificar el cargo del usuario
     if ($filas['id_cargo'] == 1) { // administrador
